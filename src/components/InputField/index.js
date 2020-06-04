@@ -1,15 +1,14 @@
 import React from 'react'
 
-const InputField = ({ type, name, required, errorMsg, value }) => {
+const InputField = ({ type, label, required, ref }) => {
   return (
     <fieldset className="full-width">
       <legend>
-        {name}: {required ? '*' : ''} <span> {errorMsg}</span>
+        {label}: {required ? '*' : ''}
       </legend>
       <input
-        name={name}
-        required={required}
-        value={value}
+        ref={ref}
+        name={label}
         type={type}
       />
     </fieldset>
