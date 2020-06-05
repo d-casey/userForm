@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from './components/Header'
 import Sidebar from './components/Sidebar'
-import RoutedContainer from './components/RoutedContainer'
+import Router from './components/Router'
 import ProgressBar from './components/ProgressBar'
 import './App.css'
 
@@ -15,7 +15,7 @@ function App() {
         <ProgressBar />
         <div className="wrapper">
           <Sidebar />
-          <RoutedContainer />
+          <Router />
         </div>
       </div>
 
