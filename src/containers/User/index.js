@@ -2,11 +2,20 @@ import React from 'react'
 import { useForm } from "react-hook-form"
 import InputField from '../../components/InputField'
 import validationRules from '../../config/validationRules'
+import { useSelector, useDispatch } from "react-redux"
+import {
+  SUBMIT_NEW_USER_FORM
+} from '../../constants/actions'
 
 const User = ({ type, name, required, ref }) => {
   const { register, handleSubmit, watch, errors } = useForm()
+  const dispatch = useDispatch()
+  const myState = useSelector(state => state)
+  const nameEgg = useSelector(state => state.newUserForm.name)
+
   const onSubmit = data => {
-    console.log(data)
+    console.log('SUBMITTING', data)
+    dispatch({ type: SUBMIT_NEW_USER_FORM, payload: data })
   }
 
   return (
