@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CheckboxField = ({ name, defaultChecked, message }) => {
+const CheckboxField = ({ name, defaultChecked, message, register }) => {
   return (
     <li className="checkbox">
       <input
@@ -8,6 +8,7 @@ const CheckboxField = ({ name, defaultChecked, message }) => {
         name={name}
         type="checkbox"
         defaultChecked={defaultChecked}
+        ref={register()}
       />
       <span>{message}</span>
     </li>

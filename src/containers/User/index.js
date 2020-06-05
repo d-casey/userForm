@@ -3,19 +3,21 @@ import { useForm } from "react-hook-form"
 import InputField from '../../components/InputField'
 import validationRules from '../../config/validationRules'
 import { useSelector, useDispatch } from "react-redux"
+import { useHistory } from "react-router-dom"
 import {
   SUBMIT_NEW_USER_FORM
 } from '../../constants/actions'
 
 const User = ({ type, name, required, ref }) => {
   const { register, handleSubmit, watch, errors } = useForm()
-  const dispatch = useDispatch()
-  const myState = useSelector(state => state)
-  const nameEgg = useSelector(state => state.newUserForm.name)
+  let dispatch = useDispatch()
+  let history = useHistory()
 
   const onSubmit = data => {
     console.log('SUBMITTING', data)
+    //do this asynchronously?
     dispatch({ type: SUBMIT_NEW_USER_FORM, payload: data })
+    history.push("/privacy")
   }
 
   return (
