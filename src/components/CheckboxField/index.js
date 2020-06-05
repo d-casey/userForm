@@ -1,16 +1,16 @@
 import React from 'react'
 
-const CheckboxField = ({ name, checked, message }) => {
+const CheckboxField = ({ name, defaultChecked, message }) => {
   return (
-      <li className="checkbox">
-        <input
-          className="checkbox-input"
-          name={name}
-          type="checkbox"
-          checked={checked}
-        />
-        <span>{message}</span>
-      </li>
+    <li className="checkbox">
+      <input
+        className="checkbox-input"
+        name={name}
+        type="checkbox"
+        defaultChecked={defaultChecked}
+      />
+      <span>{message}</span>
+    </li>
   )
 }
 
