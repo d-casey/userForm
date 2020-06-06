@@ -1,18 +1,19 @@
 import React from 'react'
-import { useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom"
+import { useSelector } from "react-redux"
 
 const ProgressBar = () => {
-  const location = useLocation()
-  console.log('location:', location.pathname)
+  const stages = ['User', 'Privacy', 'Done']
+  const appStage = useSelector(state => state.app.stage)
 
-
+  const listItems = stages.map((stage, index) =>
+    <li key={stage} className={(index === appStage) ? 'progress-bar-flex-item active-item' : 'progress-bar-flex-item'}>{stage}</li>
+  )
 
   return (
     <div className="progress-bar">
       <ul className="progress-bar-flex-container">
-        <li className={(location.pathname === '/') ? 'progress-bar-flex-item active-item' : 'progress-bar-flex-item'}>User</li>
-        <li className={(location.pathname === '/privacy') ? 'progress-bar-flex-item active-item' : 'progress-bar-flex-item'}>Privacy</li>
-        <li className={(location.pathname === '/done') ? 'progress-bar-flex-item active-item' : 'progress-bar-flex-item'}>Done</li>
+        {listItems}
       </ul>
     </div>
   )

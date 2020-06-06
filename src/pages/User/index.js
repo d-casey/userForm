@@ -5,18 +5,25 @@ import validationRules from '../../config/validationRules'
 import { useSelector, useDispatch } from "react-redux"
 import { useHistory } from "react-router-dom"
 import {
+  UPDATE_STAGE,
+  RESET_USER_FORM,
   SUBMIT_NEW_USER_FORM
 } from '../../constants/actions'
 
 const User = ({ type, name, required, ref }) => {
   const { register, handleSubmit, watch, errors } = useForm()
-  let dispatch = useDispatch()
-  let history = useHistory()
+  const dispatch = useDispatch()
+  const history = useHistory()
+  const userFormState = useSelector(state => state.newUserForm)
+  const appStage = useSelector(state => state.app.stage)
+
+  if (appStage > 1) {
+    dispatch({ type: UPDATE_STAGE, payload: { stage: 0 } })
+  }
 
   const onSubmit = data => {
-    console.log('SUBMITTING', data)
-    //do this asynchronously?
-    dispatch({ type: SUBMIT_NEW_USER_FORM, payload: data })
+    dispatch({ type: SUBMIT_NEW_USER_FORM, payload: data })//just dispatch the action creator functions here
+    dispatch({ type: UPDATE_STAGE, payload: { stage: 1 } })
     history.push("/privacy")
   }
 
@@ -31,6 +38,7 @@ const User = ({ type, name, required, ref }) => {
           register={register}
           validation={validationRules.requiredField}
           error={errors.name && errors.name.message}
+          defaultValue={userFormState.name}
         />
 
         <InputField
@@ -38,6 +46,7 @@ const User = ({ type, name, required, ref }) => {
           label="Role"
           name="role"
           register={register}
+          defaultValue={userFormState.role}
         />
 
         <InputField
@@ -48,6 +57,7 @@ const User = ({ type, name, required, ref }) => {
           register={register}
           validation={validationRules.email}
           error={errors.email && errors.email.message}
+          defaultValue={userFormState.email}
         />
 
         <InputField

@@ -5,17 +5,18 @@ import privacyForm from '../../config/privacyForm'
 import { useSelector, useDispatch } from "react-redux"
 import { useHistory } from "react-router-dom"
 import {
+  UPDATE_STAGE,
   SUBMIT_PRIVACY_FORM
 } from '../../constants/actions'
 
 const Privacy = () => {
   const { register, handleSubmit, watch, errors } = useForm()
-  const myState = useSelector(state => state)
   let dispatch = useDispatch()
   let history = useHistory()
+
   const onSubmit = data => {
-    console.log('PRIVACYSTATEDATA: ', data)
-    dispatch({ type: SUBMIT_PRIVACY_FORM, payload: data })
+    dispatch({ type: SUBMIT_PRIVACY_FORM, payload: data })//import the action creators here instead
+    dispatch({ type: UPDATE_STAGE, payload: { stage: 2 } })
     history.push("/done")
   }
 

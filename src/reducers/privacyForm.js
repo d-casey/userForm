@@ -11,7 +11,6 @@ const initialState = {
 export default function newUserForm(state = initialState, action) {
   switch (action.type) {
     case SUBMIT_PRIVACY_FORM:
-    console.log('payload: ', action.payload)
       return {
         ...state,
         receive_updates: action.payload.receive_updates,
