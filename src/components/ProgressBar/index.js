@@ -1,9 +1,9 @@
 import React from 'react'
-import { useLocation } from "react-router-dom"
 import { useSelector } from "react-redux"
+import progressBarStages from '../../config/progressBar'
 
 const ProgressBar = () => {
-  const stages = ['User', 'Privacy', 'Done']
+  const stages = progressBarStages
   const appStage = useSelector(state => state.app.stage)
 
   const listItems = stages.map((stage, index) =>

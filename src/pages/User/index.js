@@ -17,9 +17,7 @@ const User = ({ type, name, required, ref }) => {
   const userFormState = useSelector(state => state.newUserForm)
   const appStage = useSelector(state => state.app.stage)
 
-  if (appStage > 1) {
-    dispatch({ type: UPDATE_STAGE, payload: { stage: 0 } })
-  }
+  if (appStage > 1) dispatch({ type: UPDATE_STAGE, payload: { stage: 0 } })
 
   const onSubmit = data => {
     dispatch({ type: SUBMIT_NEW_USER_FORM, payload: data })//just dispatch the action creator functions here
