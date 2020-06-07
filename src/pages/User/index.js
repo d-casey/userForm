@@ -1,14 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useForm } from "react-hook-form"
 import InputField from '../../components/InputField'
 import validationRules from '../../config/validationRules'
 import { useSelector, useDispatch } from "react-redux"
 import { useHistory } from "react-router-dom"
-import {
-  UPDATE_STAGE,
-  RESET_USER_FORM,
-  SUBMIT_NEW_USER_FORM
-} from '../../constants/actions'
+import { updateStage, resetFormStage, submitNewUserForm } from '../../actions'
 
 const User = ({ type, name, required, ref }) => {
   const { register, handleSubmit, watch, errors } = useForm()
@@ -17,12 +13,13 @@ const User = ({ type, name, required, ref }) => {
   const userFormState = useSelector(state => state.newUserForm)
   const appStage = useSelector(state => state.app.stage)
 
-  //dispatch an action to reset everything, including the global submitted state
-  if (appStage > 1) dispatch({ type: UPDATE_STAGE, payload: { stage: 0 } })
+  useEffect(() => {
+    if (appStage > 1) dispatch(resetFormStage())//dispatch an action to reset everything, including the global submitted state
+  })
 
   const onSubmit = data => {
-    dispatch({ type: SUBMIT_NEW_USER_FORM, payload: data })//just dispatch the action creator functions here
-    dispatch({ type: UPDATE_STAGE, payload: { stage: 1 } })
+    dispatch(submitNewUserForm(data))
+    dispatch(updateStage(1))
     history.push("/privacy")
   }
 

@@ -8,6 +8,7 @@ import {
   UPDATE_STAGE,
   SUBMIT_PRIVACY_FORM
 } from '../../constants/actions'
+import { updateStage, submitPrivacyForm } from '../../actions'
 
 const Privacy = () => {
   const { register, handleSubmit, watch, errors } = useForm()
