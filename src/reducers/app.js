@@ -7,7 +7,7 @@ const initialState = {
   stage: 0
 }
 
-export default function newUserForm(state = initialState, action) {
+export default (state = initialState, action) => {
   switch (action.type) {
     case UPDATE_STAGE:
       return {

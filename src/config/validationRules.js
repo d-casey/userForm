@@ -2,6 +2,19 @@ const validationRules = {
   requiredField: {
     required: "Required"
   },
+  optionalText: {
+    pattern: {
+      value: /^([ a-zA-Z0-9,#.-]+)/,
+      message: "Text fields can only include letters and numbers"
+    }
+  },
+  requiredText: {
+    required: "Required",
+    pattern: {
+      value: /^([ a-zA-Z0-9,#.-]+)/,
+      message: "Text fields can only include letters and numbers"
+    }
+  },
   email : {
     required: "Required",
     pattern: {

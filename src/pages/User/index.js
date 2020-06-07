@@ -17,6 +17,7 @@ const User = ({ type, name, required, ref }) => {
   const userFormState = useSelector(state => state.newUserForm)
   const appStage = useSelector(state => state.app.stage)
 
+  //dispatch an action to reset everything, including the global submitted state
   if (appStage > 1) dispatch({ type: UPDATE_STAGE, payload: { stage: 0 } })
 
   const onSubmit = data => {
@@ -34,7 +35,7 @@ const User = ({ type, name, required, ref }) => {
           name="name"
           required
           register={register}
-          validation={validationRules.requiredField}
+          validation={validationRules.requiredText}
           error={errors.name && errors.name.message}
           defaultValue={userFormState.name}
         />
@@ -44,6 +45,8 @@ const User = ({ type, name, required, ref }) => {
           label="Role"
           name="role"
           register={register}
+          validation={validationRules.optionalText}
+          error={errors.role && errors.role.message}
           defaultValue={userFormState.role}
         />
 

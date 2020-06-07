@@ -1,4 +1,5 @@
 import {
+  RESET_PRIVACY_FORM,
   SUBMIT_PRIVACY_FORM
 } from '../constants/actions'
 
@@ -8,7 +9,7 @@ const initialState = {
   isSubmitted: false
 }
 
-export default function newUserForm(state = initialState, action) {
+export default (state = initialState, action) => {
   switch (action.type) {
     case SUBMIT_PRIVACY_FORM:
       return {
@@ -17,6 +18,9 @@ export default function newUserForm(state = initialState, action) {
         receive_communication: action.payload.receive_communication,
         isSubmitted: true
       }
+
+      case RESET_PRIVACY_FORM:
+        return initialState
 
     default:
       return state

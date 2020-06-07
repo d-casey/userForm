@@ -11,7 +11,7 @@ const initialState = {
   isSubmitted: false
 }
 
-export default function newUserForm(state = initialState, action) {
+export default (state = initialState, action) => {
   switch (action.type) {
     case SUBMIT_NEW_USER_FORM:
       return {
@@ -24,14 +24,7 @@ export default function newUserForm(state = initialState, action) {
       }
 
     case RESET_USER_FORM:
-      return {
-        ...state,
-        name: "",
-        role: "",
-        email: "",
-        password: "",
-        isSubmitted: false
-      }
+      return initialState
 
     default:
       return state

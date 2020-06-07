@@ -15,6 +15,7 @@ const persistConfig = {
   key: 'root',
   storage,
 }
+
 //configure the store better than this to declutter the main index.js file.
 const persistedReducer = persistReducer(persistConfig, rootReducer)
 const store = createStore(persistedReducer)
