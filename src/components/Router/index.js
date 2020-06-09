@@ -7,7 +7,7 @@ import PageNotFound from '../../containers/PageNotFound'
 
 const Router = () => {
   return (
-    <div className="form-container">
+    <div>
       <Switch>
           <Route path="/" component={User} exact />
           <Route path="/privacy" component={Privacy} />

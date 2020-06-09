@@ -15,7 +15,7 @@ const Done = () => {
   })
 
   return (
-    <div className="success">
+    <div className="form-success">
       <FontAwesomeIcon className="fa-5x" icon="check" />
       <p>Please verify your email address, you should have received an email from us already!</p>
     </div>

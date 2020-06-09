@@ -1,0 +1,11 @@
+.app-header {
+  flex: 1;
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 3.5em;
+  margin: 0 auto;
+  max-width: 1170px;
+}

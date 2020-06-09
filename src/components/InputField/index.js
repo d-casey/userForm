@@ -1,9 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import '../../css/input.css'
 
 const InputField = ({ type, label, name, required, register, validation, error, defaultValue }) => {
   return (
-    <fieldset className="full-width">
+    <fieldset className="full-width-imput">
       <legend>
         {label}: {required ? '*' : ''} <span className="error">{error}</span>
       </legend>

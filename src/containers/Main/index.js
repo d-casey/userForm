@@ -3,6 +3,7 @@ import Sidebar from '../../components/Sidebar'
 import Router from '../../components/Router'
 import ProgressBar from '../../components/ProgressBar'
 import { useSelector } from "react-redux"
+import mainContainer from '../../css/mainContainer.css'
 
 function App() {
   const appStage = useSelector(state => state.app.stage)

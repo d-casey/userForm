@@ -1,11 +1,10 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
-
+import '../../css/sidebar.css'
 /*
   The next step for this component is to add each stages content to config->stageConfig. That way updating one file can be easy to add new
   progress bar items and sidebar content.
 */
-
 const Sidebar = ({ appStage }) => {
   const userFormContent = () => {
     return (

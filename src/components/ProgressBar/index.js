@@ -1,6 +1,7 @@
 import React from 'react'
 import stageConfig from '../../config/stageConfig'
 import PropTypes from 'prop-types'
+import progressBar from '../../css/progressBar.css'
 
 const ProgressBar = ({ appStage }) => {
   const stages = stageConfig.progressBarStages
