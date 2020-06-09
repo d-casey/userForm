@@ -1,13 +1,13 @@
 import React from 'react'
-import progressBarStages from '../../config/progressBar'
+import stageConfig from '../../config/stageConfig'
 
 const ProgressBar = ({ appStage }) => {
-  const stages = progressBarStages
-
-  console.log('appStage:', appStage)
+  const stages = stageConfig.progressBarStages
 
   const listItems = stages.map((stage, index) =>
-    <li key={stage} className={(index === appStage) ? 'progress-bar-flex-item active-item' : 'progress-bar-flex-item'}>{stage}</li>
+    <li key={stage} className={(index === appStage) ? 'progress-bar-flex-item active-item' : 'progress-bar-flex-item'}>
+      {stage}
+    </li>
   )
 
   return (

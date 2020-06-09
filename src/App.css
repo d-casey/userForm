@@ -77,6 +77,7 @@ button {
 
 .wrapper {
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  min-height: 462px;
 }
 .wrapper > * {
   padding: 1em;
