@@ -2,7 +2,7 @@ import React from 'react'
 import { useForm } from "react-hook-form"
 import CheckboxList from '../../components/CheckboxList'
 import privacyForm from '../../config/privacyForm'
-import { useSelector, useDispatch } from "react-redux"
+import { useDispatch } from "react-redux"
 import { useHistory } from "react-router-dom"
 import {
   UPDATE_STAGE,

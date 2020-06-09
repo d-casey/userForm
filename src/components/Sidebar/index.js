@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Sidebar = () => {
+const Sidebar = ({ appStage }) => {
   return (
     <div className="sidebar">
       <h3>Sign Up Form</h3>

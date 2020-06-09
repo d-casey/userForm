@@ -19,8 +19,8 @@ const User = ({ type, name, required, ref }) => {
 
   const onSubmit = data => {
     dispatch(submitNewUserForm(data))
-    dispatch(updateStage(1))
-    history.push("/privacy")
+    dispatch(updateStage(1))//have the submit new user form dispatch update stage using thunk
+    history.push("/privacy")//also have a thunk function wrapper around these?
   }
 
   return (

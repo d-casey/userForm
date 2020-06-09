@@ -1,10 +1,10 @@
 import React from 'react'
-import { useSelector } from "react-redux"
 import progressBarStages from '../../config/progressBar'
 
-const ProgressBar = () => {
+const ProgressBar = ({ appStage }) => {
   const stages = progressBarStages
-  const appStage = useSelector(state => state.app.stage)
+
+  console.log('appStage:', appStage)
 
   const listItems = stages.map((stage, index) =>
     <li key={stage} className={(index === appStage) ? 'progress-bar-flex-item active-item' : 'progress-bar-flex-item'}>{stage}</li>

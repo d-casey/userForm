@@ -1,9 +1,9 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
-import User from '../../pages/User'
-import Privacy from '../../pages/Privacy'
-import Done from '../../pages/Done'
-import PageNotFound from '../../pages/PageNotFound'
+import User from '../../containers/UserForm'
+import Privacy from '../../containers/PrivacyForm'
+import Done from '../../containers/Done'
+import PageNotFound from '../../containers/PageNotFound'
 
 const Router = () => {
   return (
