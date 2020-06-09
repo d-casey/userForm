@@ -4,7 +4,7 @@ import InputField from '../../components/InputField'
 import validationRules from '../../config/validationRules'
 import { useSelector, useDispatch } from "react-redux"
 import { useHistory } from "react-router-dom"
-import { updateStage, resetFormStage, submitNewUserForm } from '../../store/actions'
+import { updateStage, resetFormStage, submitNewUserForm, resetApp } from '../../store/actions'
 
 const User = ({ type, name, required, ref }) => {
   const { register, handleSubmit, watch, errors } = useForm()
@@ -12,9 +12,10 @@ const User = ({ type, name, required, ref }) => {
   const history = useHistory()
   const userFormState = useSelector(state => state.newUserForm)
   const appStage = useSelector(state => state.app.stage)
+  const isFormCompleted = useSelector(state => state.app.formCompleted)
 
   useEffect(() => {
-    if (appStage > 1) dispatch(resetFormStage())//dispatch an action to reset everything, including the global submitted state
+    if (isFormCompleted) dispatch(resetApp())
   })
 
   const onSubmit = data => {

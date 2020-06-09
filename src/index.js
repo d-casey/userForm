@@ -6,10 +6,12 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import { PersistGate } from 'redux-persist/integration/react'
 import { Provider } from 'react-redux'
-import { createStore } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
 import { persistStore, persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 import rootReducer from './store/reducers'
+
+import thunk from 'redux-thunk'
 
 const persistConfig = {
   key: 'root',
@@ -18,7 +20,7 @@ const persistConfig = {
 
 //configure the store better than this to declutter the main index.js file.
 const persistedReducer = persistReducer(persistConfig, rootReducer)
-const store = createStore(persistedReducer)
+const store = createStore(persistedReducer, applyMiddleware(thunk))
 const persistor = persistStore(store)
 
 

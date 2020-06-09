@@ -14,7 +14,6 @@ const initialState = {
 export default (state = initialState, action) => {
   switch (action.type) {
     case SUBMIT_NEW_USER_FORM:
-      console.log('submitting new user form: ', action.payload)
       return {
         ...state,
         name: action.payload.name,
