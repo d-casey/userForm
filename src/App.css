@@ -166,3 +166,9 @@ button:hover, button:focus {
   background: #0d66e5;
   color: white;
 }
+
+.success {
+  color: #0dbf73;
+  text-align: center;
+  font-weight: bold;
+}

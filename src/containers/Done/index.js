@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from "react-redux"
 import { logSubmittedFormDetails } from '../../store/actions'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Done = () => {
   const dispatch = useDispatch()
@@ -14,7 +15,8 @@ const Done = () => {
   })
 
   return (
-    <div>
+    <div className="success">
+      <FontAwesomeIcon className="fa-5x" icon="check" />
       <p>Please verify your email address, you should have received an email from us already!</p>
     </div>
   )
