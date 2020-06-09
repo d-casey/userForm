@@ -14,7 +14,6 @@ const Privacy = () => {
 
   const onSubmit = data => {
     dispatch(submitPrivacyForm(data))
-    dispatch(updateStage(2))
     history.push("/done")
   }
 

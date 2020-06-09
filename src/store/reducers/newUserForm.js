@@ -1,5 +1,5 @@
 import {
-  SUBMIT_NEW_USER_FORM,
+  UPDATE_USER_FIELDS,
   RESET_USER_FORM
 } from '../constants/actions'
 
@@ -13,7 +13,7 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case SUBMIT_NEW_USER_FORM:
+    case UPDATE_USER_FIELDS:
       return {
         ...state,
         name: action.payload.name,

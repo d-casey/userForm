@@ -23,7 +23,7 @@ export const loggingDetails = () => ({
   type: LOGGING_DETAILS
 })
 
-export const resetAllForms = () => (dispatch) => {
+export const resetAllForms = () => dispatch => {
   dispatch(resetUserForm())
   dispatch(resetPrivacyForm())
 }
@@ -36,7 +36,7 @@ export const resetApp = () => ({
   type: RESET_APP
 })
 
-export const logSubmittedFormDetails = (formDetails) => (dispatch) => {
+export const logSubmittedFormDetails = (formDetails) => dispatch => {
   dispatch(loggingDetails())
   console.log('formDetails: ', formDetails)
   dispatch(resetAllForms())

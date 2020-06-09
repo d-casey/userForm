@@ -4,7 +4,7 @@ import InputField from '../../components/InputField'
 import validationRules from '../../config/validationRules'
 import { useSelector, useDispatch } from "react-redux"
 import { useHistory } from "react-router-dom"
-import { updateStage, submitNewUserForm, resetApp } from '../../store/actions'
+import { submitNewUserForm, resetApp } from '../../store/actions'
 
 const User = () => {
   const { register, handleSubmit, errors } = useForm()
@@ -19,7 +19,6 @@ const User = () => {
 
   const onSubmit = data => {
     dispatch(submitNewUserForm(data))
-    dispatch(updateStage(1))
     history.push("/privacy")
   }
 
