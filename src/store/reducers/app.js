@@ -2,7 +2,6 @@ import {
   UPDATE_STAGE,
   RESET_FORM_STAGE,
   SET_FORM_COMPLETION,
-  RESET_FORM_COMPLETION,
   RESET_APP
 } from '../constants/actions'
 

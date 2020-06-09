@@ -7,7 +7,7 @@ import { useHistory } from "react-router-dom"
 import { updateStage, submitPrivacyForm } from '../../store/actions'
 
 const Privacy = () => {
-  const { register, handleSubmit, watch, errors } = useForm()
+  const { register, handleSubmit } = useForm()
   let dispatch = useDispatch()
   let history = useHistory()
 

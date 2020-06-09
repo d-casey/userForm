@@ -9,7 +9,9 @@ const Done = () => {
   const privacyFormData = useSelector(state => state.privacyForm)
   const finalFormData = { newUserFormData, privacyFormData }
 
-  if(!isFormCompleted) dispatch(logSubmittedFormDetails(finalFormData))
+  useEffect(() => {
+    if(!isFormCompleted) dispatch(logSubmittedFormDetails(finalFormData))
+  })
 
   return (
     <div>

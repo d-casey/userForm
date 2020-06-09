@@ -10,7 +10,7 @@ let initialState = {
 }
 
 privacyForm.checkboxData.map((checkbox) => {
-  initialState[checkbox.name] = checkbox.defaultChecked || false
+  return initialState[checkbox.name] = checkbox.defaultChecked || false
 })
 
 export default (state = initialState, action) => {
@@ -18,7 +18,7 @@ export default (state = initialState, action) => {
     case SUBMIT_PRIVACY_FORM:
       let submittedFields = {}
       Object.entries(action.payload).map((field) => {
-        submittedFields[field[0]] = field[1]
+        return submittedFields[field[0]] = field[1]
       })
 
       return {
