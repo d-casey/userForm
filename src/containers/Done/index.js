@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from "react-redux"
 import { resetUserForm, resetPrivacyForm } from '../../store/actions'
 
@@ -8,11 +8,13 @@ const Done = () => {
   const privacyFormData = useSelector(state => state.privacyForm)
   const finalFormData = { newUserFormData, privacyFormData }
 
-  //async these three/combine them in a thunk dispatch
-  console.log('Final form data', finalFormData)
-  dispatch(resetUserForm())
-  dispatch(resetPrivacyForm())
-
+  useEffect(() => {
+    //async these three/combine them in a thunk dispatch
+    //make sure they only log once?
+    console.log('Final form data', finalFormData)
+    dispatch(resetUserForm())
+    dispatch(resetPrivacyForm())
+  })
 
   return (
     <div>
