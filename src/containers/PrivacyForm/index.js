@@ -4,11 +4,7 @@ import CheckboxList from '../../components/CheckboxList'
 import privacyForm from '../../config/privacyForm'
 import { useDispatch } from "react-redux"
 import { useHistory } from "react-router-dom"
-import {
-  UPDATE_STAGE,
-  SUBMIT_PRIVACY_FORM
-} from '../../constants/actions'
-import { updateStage, submitPrivacyForm } from '../../actions'
+import { updateStage, submitPrivacyForm } from '../../store/actions'
 
 const Privacy = () => {
   const { register, handleSubmit, watch, errors } = useForm()
@@ -16,8 +12,8 @@ const Privacy = () => {
   let history = useHistory()
 
   const onSubmit = data => {
-    dispatch({ type: SUBMIT_PRIVACY_FORM, payload: data })//import the action creators here instead
-    dispatch({ type: UPDATE_STAGE, payload: { stage: 2 } })
+    dispatch(submitPrivacyForm(data))//import the action creators here instead
+    dispatch(updateStage(2))
     history.push("/done")
   }
 

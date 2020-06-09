@@ -4,7 +4,7 @@ import InputField from '../../components/InputField'
 import validationRules from '../../config/validationRules'
 import { useSelector, useDispatch } from "react-redux"
 import { useHistory } from "react-router-dom"
-import { updateStage, resetFormStage, submitNewUserForm } from '../../actions'
+import { updateStage, resetFormStage, submitNewUserForm } from '../../store/actions'
 
 const User = ({ type, name, required, ref }) => {
   const { register, handleSubmit, watch, errors } = useForm()

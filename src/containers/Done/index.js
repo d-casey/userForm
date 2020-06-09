@@ -1,10 +1,6 @@
 import React from 'react'
 import { useSelector, useDispatch } from "react-redux"
-import {
-  RESET_USER_FORM,
-  RESET_PRIVACY_FORM
-} from '../../constants/actions'
-// import resetUserForm from '../../actions'
+import { resetUserForm, resetPrivacyForm } from '../../store/actions'
 
 const Done = () => {
   const dispatch = useDispatch()
@@ -12,10 +8,10 @@ const Done = () => {
   const privacyFormData = useSelector(state => state.privacyForm)
   const finalFormData = { newUserFormData, privacyFormData }
 
-  //only log this once, global state variable for submitted and check that before doing the below steps
+  //async these three/combine them in a thunk dispatch
   console.log('Final form data', finalFormData)
-  dispatch({ type: RESET_USER_FORM })
-  dispatch({ type: RESET_PRIVACY_FORM })
+  dispatch(resetUserForm())
+  dispatch(resetPrivacyForm())
 
 
   return (
