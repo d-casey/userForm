@@ -1,5 +1,6 @@
 import React from 'react'
 import CheckboxField from '../CheckboxField'
+import PropTypes from 'prop-types'
 
 const CheckboxList = ({ checkboxData, register }) => {
   const checkboxFields = checkboxData.map((checkbox) =>
@@ -12,5 +13,11 @@ const CheckboxList = ({ checkboxData, register }) => {
     </ul>
   )
 }
+
+CheckboxField.propTypes = {
+  checkboxData: PropTypes.array,
+  register: PropTypes.func.isRequired
+}
+
 
 export default CheckboxList

@@ -6,7 +6,7 @@ import { useSelector, useDispatch } from "react-redux"
 import { useHistory } from "react-router-dom"
 import { updateStage, submitNewUserForm, resetApp } from '../../store/actions'
 
-const User = ({ type, name, required, ref }) => {
+const User = () => {
   const { register, handleSubmit, errors } = useForm()
   const dispatch = useDispatch()
   const history = useHistory()

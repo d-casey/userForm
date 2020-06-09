@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import PropTypes from 'prop-types'
 
 /*
   The next step for this component is to add each stages content to config->stageConfig. That way updating one file can be easy to add new
@@ -46,6 +47,10 @@ const Sidebar = ({ appStage }) => {
       { appStage === 2 && done() }
     </div>
   )
+}
+
+Sidebar.propTypes = {
+  appStage: PropTypes.number
 }
 
 export default Sidebar

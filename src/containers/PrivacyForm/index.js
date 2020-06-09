@@ -8,11 +8,12 @@ import { updateStage, submitPrivacyForm } from '../../store/actions'
 
 const Privacy = () => {
   const { register, handleSubmit } = useForm()
-  let dispatch = useDispatch()
-  let history = useHistory()
+  const dispatch = useDispatch()
+  const history = useHistory()
+  let checkboxData = privacyForm.checkboxData || []
 
   const onSubmit = data => {
-    dispatch(submitPrivacyForm(data))//import the action creators here instead
+    dispatch(submitPrivacyForm(data))
     dispatch(updateStage(2))
     history.push("/done")
   }
@@ -20,7 +21,7 @@ const Privacy = () => {
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <CheckboxList checkboxData={privacyForm.checkboxData} register={register} />
+        <CheckboxList checkboxData={checkboxData} register={register} />
         <button className="right" type="submit">Submit</button>
       </form>
     </div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const CheckboxField = ({ name, defaultChecked, message, register }) => {
   return (
@@ -13,6 +14,13 @@ const CheckboxField = ({ name, defaultChecked, message, register }) => {
       <span>{message}</span>
     </li>
   )
+}
+
+CheckboxField.propTypes = {
+  name: PropTypes.string,
+  defaultChecked: PropTypes.bool,
+  message: PropTypes.string.isRequired,
+  register: PropTypes.func.isRequired
 }
 
 export default CheckboxField

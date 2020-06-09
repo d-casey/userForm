@@ -1,5 +1,6 @@
 import React from 'react'
 import stageConfig from '../../config/stageConfig'
+import PropTypes from 'prop-types'
 
 const ProgressBar = ({ appStage }) => {
   const stages = stageConfig.progressBarStages
@@ -17,6 +18,10 @@ const ProgressBar = ({ appStage }) => {
       </ul>
     </div>
   )
+}
+
+ProgressBar.propTypes = {
+  appStage: PropTypes.number
 }
 
 export default ProgressBar
