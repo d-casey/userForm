@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it resets the app correctly 1`] = `
+Object {
+  "formCompleted": false,
+  "stage": 0,
+}
+`;
+
+exports[`it resets the stage correctly 1`] = `
+Object {
+  "stage": 0,
+}
+`;
+
+exports[`it returns the default state when nothing provided 1`] = `Object {}`;
+
+exports[`it sets the form to complete correctly 1`] = `
+Object {
+  "formCompleted": true,
+}
+`;
+
+exports[`it updates the stage correctly 1`] = `
+Object {
+  "stage": 2,
+}
+`;

@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it resets the stage correctly 1`] = `
+Object {
+  "email": "",
+  "isSubmitted": false,
+  "name": "",
+  "password": "",
+  "role": "",
+}
+`;
+
+exports[`it returns the default state when nothing provided 1`] = `Object {}`;
+
+exports[`it updates the user fields correctly 1`] = `
+Object {
+  "email": "Sev@owlmail.com",
+  "isSubmitted": true,
+  "name": "Severus Snape",
+  "password": "Alw4ys",
+  "role": "Potions master",
+}
+`;
