@@ -1,9 +1,9 @@
 import React from 'react'
-import { useForm } from "react-hook-form"
+import { useForm } from 'react-hook-form'
 import CheckboxList from '../../components/CheckboxList'
 import privacyForm from '../../config/privacyForm'
-import { useDispatch } from "react-redux"
-import { useHistory } from "react-router-dom"
+import { useDispatch } from 'react-redux'
+import { useHistory } from 'react-router-dom'
 import { submitPrivacyForm } from '../../store/actions'
 
 const Privacy = () => {
@@ -14,14 +14,14 @@ const Privacy = () => {
 
   const onSubmit = data => {
     dispatch(submitPrivacyForm(data))
-    history.push("/done")
+    history.push('/done')
   }
 
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)}>
         <CheckboxList checkboxData={checkboxData} register={register} />
-        <button className="right" type="submit">Submit</button>
+        <button data-testid='privacy-form-submit-button' className='right' type='submit'>Submit</button>
       </form>
     </div>
   )

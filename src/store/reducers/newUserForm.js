@@ -3,7 +3,7 @@ import {
   RESET_USER_FORM
 } from '../constants/actions'
 
-const initialState = {
+export const initialState = {
   name: "",
   role: "",
   email: "",

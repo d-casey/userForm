@@ -13,8 +13,8 @@ const ProgressBar = ({ appStage }) => {
   )
 
   return (
-    <div className="progress-bar">
-      <ul className="progress-bar-flex-container">
+    <div className='progress-bar'>
+      <ul className='progress-bar-flex-container'>
         {listItems}
       </ul>
     </div>

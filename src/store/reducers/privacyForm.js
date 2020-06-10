@@ -5,7 +5,7 @@ import {
 
 import privacyForm from '../../config/privacyForm'
 
-let initialState = {
+export let initialState = {
   isSubmitted: false
 }
 

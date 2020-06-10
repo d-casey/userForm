@@ -9,6 +9,7 @@ exports[`renders correctly when passed an array of checkbox data 1`] = `
   >
     <input
       className="checkbox-input"
+      data-testid="receive_updates"
       defaultChecked={true}
       name="receive_updates"
       type="checkbox"
@@ -22,6 +23,7 @@ exports[`renders correctly when passed an array of checkbox data 1`] = `
   >
     <input
       className="checkbox-input"
+      data-testid="receive_communication"
       name="receive_communication"
       type="checkbox"
     />

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 const CheckboxList = ({ checkboxData, register }) => {
   const checkboxFields = checkboxData.map((checkbox) =>
-    <CheckboxField register={register} key={checkbox.name} name={checkbox.name} defaultChecked={checkbox.defaultChecked} message={checkbox.message} />
+    <CheckboxField register={register} key={checkbox.name} name={checkbox.name} defaultChecked={checkbox.defaultChecked} message={checkbox.message} testId={checkbox.testId} />
   )
 
   return (

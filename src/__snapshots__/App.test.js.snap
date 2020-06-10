@@ -1,0 +1,165 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> container renders the content as expected 1`] = `
+<div
+  className="App"
+>
+  <header
+    className="app-header"
+  >
+    <img
+      alt="trayLogo"
+      src="logo.png"
+    />
+  </header>
+  <div
+    className="main-container"
+  >
+    <div
+      className="progress-bar"
+    >
+      <ul
+        className="progress-bar-flex-container"
+      >
+        <li
+          className="progress-bar-flex-item active-item"
+        >
+          User
+        </li>
+        <li
+          className="progress-bar-flex-item"
+        >
+          Privacy
+        </li>
+        <li
+          className="progress-bar-flex-item"
+        >
+          Done
+        </li>
+      </ul>
+    </div>
+    <div
+      className="wrapper"
+    >
+      <div
+        className="sidebar"
+      >
+        <h3>
+          Sign Up Form
+        </h3>
+        <p>
+          Required fiels are marked with an *
+        </p>
+        <p>
+          Passwords must be:
+        </p>
+        <ul>
+          <li>
+            At least 10 characters long
+          </li>
+          <li>
+            Contain at least one number
+          </li>
+          <li>
+            Contain at least one upper case letter
+          </li>
+          <li>
+            Contain at least one lower case letter
+          </li>
+        </ul>
+      </div>
+      <div
+        className="form"
+      >
+        <form
+          data-testid="user-form"
+          onSubmit={[Function]}
+        >
+          <fieldset
+            className="full-width-imput"
+          >
+            <legend>
+              Name
+              : 
+              *
+               
+              <span
+                className="error"
+              />
+            </legend>
+            <input
+              data-testid="user_name"
+              defaultValue=""
+              name="name"
+              type="text"
+            />
+          </fieldset>
+          <fieldset
+            className="full-width-imput"
+          >
+            <legend>
+              Role
+              : 
+              
+               
+              <span
+                className="error"
+              />
+            </legend>
+            <input
+              data-testid="user_role"
+              defaultValue=""
+              name="role"
+              type="text"
+            />
+          </fieldset>
+          <fieldset
+            className="full-width-imput"
+          >
+            <legend>
+              Email
+              : 
+              *
+               
+              <span
+                className="error"
+              />
+            </legend>
+            <input
+              data-testid="user_email"
+              defaultValue=""
+              name="email"
+              type="email"
+            />
+          </fieldset>
+          <fieldset
+            className="full-width-imput"
+          >
+            <legend>
+              Password
+              : 
+              *
+               
+              <span
+                className="error"
+              />
+            </legend>
+            <input
+              data-testid="user_password"
+              name="password"
+              type="password"
+            />
+          </fieldset>
+          <button
+            className="right"
+            data-testid="user-form-submit-button"
+            type="submit"
+          >
+            Next
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+`;

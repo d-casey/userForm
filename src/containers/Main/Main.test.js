@@ -14,10 +14,10 @@ let initialState = {
     formCompleted: true
   },
   newUserForm: {
-    name: "",
-    role: "",
-    email: "",
-    password: "",
+    name: '',
+    role: '',
+    email: '',
+    password: '',
     isSubmitted: false
   },
   privacyForm : {

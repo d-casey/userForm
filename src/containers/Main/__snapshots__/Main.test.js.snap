@@ -61,6 +61,7 @@ exports[`<Main /> container When the app stage is 0 passes the state into the si
       className="form"
     >
       <form
+        data-testid="user-form"
         onSubmit={[Function]}
       >
         <fieldset
@@ -76,6 +77,7 @@ exports[`<Main /> container When the app stage is 0 passes the state into the si
             />
           </legend>
           <input
+            data-testid="user_name"
             defaultValue=""
             name="name"
             type="text"
@@ -94,6 +96,7 @@ exports[`<Main /> container When the app stage is 0 passes the state into the si
             />
           </legend>
           <input
+            data-testid="user_role"
             defaultValue=""
             name="role"
             type="text"
@@ -112,6 +115,7 @@ exports[`<Main /> container When the app stage is 0 passes the state into the si
             />
           </legend>
           <input
+            data-testid="user_email"
             defaultValue=""
             name="email"
             type="email"
@@ -130,12 +134,14 @@ exports[`<Main /> container When the app stage is 0 passes the state into the si
             />
           </legend>
           <input
+            data-testid="user_password"
             name="password"
             type="password"
           />
         </fieldset>
         <button
           className="right"
+          data-testid="user-form-submit-button"
           type="submit"
         >
           Next
@@ -190,6 +196,7 @@ exports[`<Main /> container When the app stage is 1 should render the correct si
       className="form"
     >
       <form
+        data-testid="user-form"
         onSubmit={[Function]}
       >
         <fieldset
@@ -205,6 +212,7 @@ exports[`<Main /> container When the app stage is 1 should render the correct si
             />
           </legend>
           <input
+            data-testid="user_name"
             defaultValue=""
             name="name"
             type="text"
@@ -223,6 +231,7 @@ exports[`<Main /> container When the app stage is 1 should render the correct si
             />
           </legend>
           <input
+            data-testid="user_role"
             defaultValue=""
             name="role"
             type="text"
@@ -241,6 +250,7 @@ exports[`<Main /> container When the app stage is 1 should render the correct si
             />
           </legend>
           <input
+            data-testid="user_email"
             defaultValue=""
             name="email"
             type="email"
@@ -259,12 +269,14 @@ exports[`<Main /> container When the app stage is 1 should render the correct si
             />
           </legend>
           <input
+            data-testid="user_password"
             name="password"
             type="password"
           />
         </fieldset>
         <button
           className="right"
+          data-testid="user-form-submit-button"
           type="submit"
         >
           Next
@@ -316,6 +328,7 @@ exports[`<Main /> container When the app stage is 2 should render the correct si
       className="form"
     >
       <form
+        data-testid="user-form"
         onSubmit={[Function]}
       >
         <fieldset
@@ -331,6 +344,7 @@ exports[`<Main /> container When the app stage is 2 should render the correct si
             />
           </legend>
           <input
+            data-testid="user_name"
             defaultValue=""
             name="name"
             type="text"
@@ -349,6 +363,7 @@ exports[`<Main /> container When the app stage is 2 should render the correct si
             />
           </legend>
           <input
+            data-testid="user_role"
             defaultValue=""
             name="role"
             type="text"
@@ -367,6 +382,7 @@ exports[`<Main /> container When the app stage is 2 should render the correct si
             />
           </legend>
           <input
+            data-testid="user_email"
             defaultValue=""
             name="email"
             type="email"
@@ -385,12 +401,14 @@ exports[`<Main /> container When the app stage is 2 should render the correct si
             />
           </legend>
           <input
+            data-testid="user_password"
             name="password"
             type="password"
           />
         </fieldset>
         <button
           className="right"
+          data-testid="user-form-submit-button"
           type="submit"
         >
           Next

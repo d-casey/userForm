@@ -5,7 +5,7 @@ import {
   RESET_APP
 } from '../constants/actions'
 
-const initialState = {
+export const initialState = {
   stage: 0,
   formCompleted: false
 }
