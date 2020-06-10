@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly when empty 1`] = `
+<div
+  className="sidebar"
+/>
+`;
+
+exports[`renders the correct content for the initial stage 1`] = `
+<div
+  className="sidebar"
+>
+  <h3>
+    Sign Up Form
+  </h3>
+  <p>
+    Required fiels are marked with an *
+  </p>
+  <p>
+    Passwords must be:
+  </p>
+  <ul>
+    <li>
+      At least 10 characters long
+    </li>
+    <li>
+      Contain at least one number
+    </li>
+    <li>
+      Contain at least one upper case letter
+    </li>
+    <li>
+      Contain at least one lower case letter
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`renders the correct content for the second stage 1`] = `
+<div
+  className="sidebar"
+>
+  <h3>
+    Privacy
+  </h3>
+  <p>
+    Please let us know how you would like us to contact you.
+  </p>
+</div>
+`;
+
+exports[`renders the correct content for the third stage 1`] = `
+<div
+  className="sidebar"
+>
+  <h3>
+    Done!
+  </h3>
+</div>
+`;

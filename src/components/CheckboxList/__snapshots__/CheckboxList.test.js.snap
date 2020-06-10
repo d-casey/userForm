@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly when passed an array of checkbox data 1`] = `
+<ul
+  className="full-width-imput"
+>
+  <li
+    className="checkbox"
+  >
+    <input
+      className="checkbox-input"
+      defaultChecked={true}
+      name="receive_updates"
+      type="checkbox"
+    />
+    <span>
+      Receive Updates about Tray.io products by email
+    </span>
+  </li>
+  <li
+    className="checkbox"
+  >
+    <input
+      className="checkbox-input"
+      name="receive_communication"
+      type="checkbox"
+    />
+    <span>
+      Receive communication by email for other products created by the Tray.io team Receive communication by email for other products created by the Tray.io team Receive communication by email for other products created by the Tray.io team
+    </span>
+  </li>
+</ul>
+`;

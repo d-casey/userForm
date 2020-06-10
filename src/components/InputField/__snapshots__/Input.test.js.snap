@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly when passed all details 1`] = `
+<fieldset
+  className="full-width-imput"
+>
+  <legend>
+    name
+    : 
+    *
+     
+    <span
+      className="error"
+    >
+      error
+    </span>
+  </legend>
+  <input
+    defaultValue="Severus Snape"
+    name="name"
+    type="text"
+  />
+</fieldset>
+`;

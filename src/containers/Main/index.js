@@ -1,6 +1,6 @@
 import React from 'react'
 import Sidebar from '../../components/Sidebar'
-import Router from '../../components/Router'
+import FormSwitcher from '../../components/FormSwitcher'
 import ProgressBar from '../../components/ProgressBar'
 import { useSelector } from "react-redux"
 import mainContainer from '../../css/mainContainer.css'
@@ -13,7 +13,7 @@ function App() {
       <ProgressBar appStage={appStage} />
       <div className="wrapper">
         <Sidebar appStage={appStage} />
-        <Router />
+        <FormSwitcher />
       </div>
     </div>
   )

@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly when empty 1`] = `
+<div
+  className="progress-bar"
+>
+  <ul
+    className="progress-bar-flex-container"
+  >
+    <li
+      className="progress-bar-flex-item"
+    >
+      User
+    </li>
+    <li
+      className="progress-bar-flex-item"
+    >
+      Privacy
+    </li>
+    <li
+      className="progress-bar-flex-item"
+    >
+      Done
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`renders the correct content for the initial stage 1`] = `
+<div
+  className="progress-bar"
+>
+  <ul
+    className="progress-bar-flex-container"
+  >
+    <li
+      className="progress-bar-flex-item active-item"
+    >
+      User
+    </li>
+    <li
+      className="progress-bar-flex-item"
+    >
+      Privacy
+    </li>
+    <li
+      className="progress-bar-flex-item"
+    >
+      Done
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`renders the correct content for the second stage 1`] = `
+<div
+  className="progress-bar"
+>
+  <ul
+    className="progress-bar-flex-container"
+  >
+    <li
+      className="progress-bar-flex-item"
+    >
+      User
+    </li>
+    <li
+      className="progress-bar-flex-item active-item"
+    >
+      Privacy
+    </li>
+    <li
+      className="progress-bar-flex-item"
+    >
+      Done
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`renders the correct content for the third stage 1`] = `
+<div
+  className="progress-bar"
+>
+  <ul
+    className="progress-bar-flex-container"
+  >
+    <li
+      className="progress-bar-flex-item"
+    >
+      User
+    </li>
+    <li
+      className="progress-bar-flex-item"
+    >
+      Privacy
+    </li>
+    <li
+      className="progress-bar-flex-item active-item"
+    >
+      Done
+    </li>
+  </ul>
+</div>
+`;

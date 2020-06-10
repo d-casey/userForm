@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly when passed all details 1`] = `
+<li
+  className="checkbox"
+>
+  <input
+    className="checkbox-input"
+    defaultChecked={true}
+    name="checkbox_1"
+    type="checkbox"
+  />
+  <span>
+    Would you like to hear from us?
+  </span>
+</li>
+`;
