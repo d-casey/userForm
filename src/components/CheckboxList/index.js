@@ -8,7 +8,7 @@ const CheckboxList = ({ checkboxData, register }) => {
   )
 
   return (
-    <ul className="full-width-imput">
+    <ul className='full-width-imput'>
       {checkboxFields}
     </ul>
   )

@@ -4,10 +4,10 @@ import {
 } from '../constants/actions'
 
 export const initialState = {
-  name: "",
-  role: "",
-  email: "",
-  password: "",
+  name: '',
+  role: '',
+  email: '',
+  password: '',
   isSubmitted: false
 }
 

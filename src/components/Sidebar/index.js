@@ -40,7 +40,7 @@ const Sidebar = ({ appStage }) => {
   }
 
   return (
-    <div className="sidebar">
+    <div className='sidebar'>
       { appStage === 0 && userFormContent() }
       { appStage === 1 && privacyFormContent() }
       { appStage === 2 && done() }

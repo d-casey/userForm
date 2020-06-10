@@ -4,9 +4,9 @@ import '../../css/input.css'
 
 const InputField = ({ type, label, name, required, register, validation, error, defaultValue, testId }) => {
   return (
-    <fieldset className="full-width-imput">
+    <fieldset className='full-width-imput'>
       <legend>
-        {label}: {required ? '*' : ''} <span className="error">{error}</span>
+        {label}: {required ? '*' : ''} <span className='error'>{error}</span>
       </legend>
       <input type={type} name={name} ref={register(validation)} defaultValue={defaultValue} data-testid={testId} />
     </fieldset>
