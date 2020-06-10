@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import checkboxes from '../../css/checkboxes.css'
+import '../../css/checkboxes.css'
 
 const CheckboxField = ({ name, defaultChecked, message, register }) => {
   return (

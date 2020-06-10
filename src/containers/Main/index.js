@@ -3,9 +3,9 @@ import Sidebar from '../../components/Sidebar'
 import FormSwitcher from '../../components/FormSwitcher'
 import ProgressBar from '../../components/ProgressBar'
 import { useSelector } from "react-redux"
-import mainContainer from '../../css/mainContainer.css'
+import '../../css/mainContainer.css'
 
-function App() {
+const Main = () => {
   const appStage = useSelector(state => state.app.stage)
 
   return (
@@ -19,4 +19,4 @@ function App() {
   )
 }
 
-export default App
+export default Main

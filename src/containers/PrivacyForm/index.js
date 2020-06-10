@@ -4,7 +4,7 @@ import CheckboxList from '../../components/CheckboxList'
 import privacyForm from '../../config/privacyForm'
 import { useDispatch } from "react-redux"
 import { useHistory } from "react-router-dom"
-import { updateStage, submitPrivacyForm } from '../../store/actions'
+import { submitPrivacyForm } from '../../store/actions'
 
 const Privacy = () => {
   const { register, handleSubmit } = useForm()
