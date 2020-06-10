@@ -19,10 +19,6 @@ export const resetFormStage = () => ({
   type: RESET_FORM_STAGE
 })
 
-export const loggingDetails = () => ({
-  type: LOGGING_DETAILS
-})
-
 export const resetAllForms = () => dispatch => {
   dispatch(resetUserForm())
   dispatch(resetPrivacyForm())
@@ -34,6 +30,10 @@ export const setFormCompletion = () => ({
 
 export const resetApp = () => ({
   type: RESET_APP
+})
+
+export const loggingDetails = () => ({
+  type: LOGGING_DETAILS
 })
 
 export const logSubmittedFormDetails = (formDetails) => dispatch => {

@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`app actions loggingDetails says that we are logging the details 1`] = `
+Object {
+  "type": "LOGGING_DETAILS",
+}
+`;
+
+exports[`app actions resetApp resets the app 1`] = `
+Object {
+  "type": "RESET_APP",
+}
+`;
+
+exports[`app actions resetFormStage sends the actions 1`] = `
+Object {
+  "type": "RESET_FORM_STAGE",
+}
+`;
+
+exports[`app actions setFormCompletion sets the form completion 1`] = `
+Object {
+  "type": "SET_FORM_COMPLETION",
+}
+`;
+
+exports[`app actions updateStage sends the stage as the payload 1`] = `
+Object {
+  "payload": Object {
+    "stage": Object {
+      "stage": 1,
+    },
+  },
+  "type": "UPDATE_STAGE",
+}
+`;

@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+Object {
+  "payload": Object {
+    "formFields": Object {},
+  },
+  "type": "SUBMIT_PRIVACY_FORM",
+}
+`;
+
+exports[`privacyForm actions resetPrivacyForm sends the resetPrivacyForm action 1`] = `
+Object {
+  "type": "RESET_PRIVACY_FORM",
+}
+`;

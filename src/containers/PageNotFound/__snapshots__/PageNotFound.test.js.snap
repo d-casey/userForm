@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PageNotFound /> container renders the correct content 1`] = `
+<div>
+  <p>
+    That page was not found. Why not head back to the 
+    <a
+      href="/"
+    >
+      Home
+    </a>
+  </p>
+</div>
+`;

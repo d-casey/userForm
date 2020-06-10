@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`newUserForm actions resetUserForm sends the resetUserForm actions 1`] = `
+Object {
+  "type": "RESET_USER_FORM",
+}
+`;
+
+exports[`newUserForm actions updateUserFields sends the form fields as the payload 1`] = `
+Object {
+  "payload": Object {
+    "formFields": Object {},
+  },
+  "type": "UPDATE_USER_FIELDS",
+}
+`;
