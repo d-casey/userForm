@@ -3,7 +3,7 @@ import Header from './components/Header'
 import Main from './containers/Main'
 import './css/App.css'
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <Header />
