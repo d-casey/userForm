@@ -4,7 +4,7 @@ import { render, screen, fireEvent, act } from '../../testUtils'
 import '@testing-library/jest-dom/extend-expect'
 import PrivacyForm from '.'
 import * as privacyFormActions from '../../store/actions/privacyForm'
-import { Router } from 'react-router-dom';
+import { Router } from 'react-router-dom'
 
 let historyMock
 describe('Rendering the privacy form', () => {

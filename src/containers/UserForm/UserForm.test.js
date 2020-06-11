@@ -2,24 +2,22 @@ import React from 'react'
 import { createStore } from 'redux'
 import { render, screen, fireEvent, act } from '../../testUtils'
 import '@testing-library/jest-dom/extend-expect'
-import UserForm from '.'
+import PrivacyForm from '.'
 import * as userFormActions from '../../store/actions/newUserForm'
+import { Router } from 'react-router-dom'
 
-/*
-  Learned a harsh lesson that react-hook-form is not easy to write tests for. It works really well, but trying to submit it and assert
-  the dispatch function was called should have been simple. It really was not.
-*/
-describe('Rendering the initial user form', () => {
+let historyMock
+describe('Rendering the user form', () => {
   const store = createStore(() => ({
     app: {
-      stage: 0,
+      stage: 1,
       formCompleted: false
     },
     newUserForm: {
       name: 'Viktor Krum',
       role: 'Seeker',
       email: 'trailofkrums@durmstrang.com',
-      password: 'Password123245',
+      password: 'Qu1dDitch123',
       isSubmitted: false
     },
     privacyForm : {
@@ -31,12 +29,17 @@ describe('Rendering the initial user form', () => {
 
   beforeEach(() => {
     store.dispatch = jest.fn()
-    render(<UserForm />, { store })
+    historyMock = { push: jest.fn(), location: {}, listen: jest.fn() }
+    render(<Router history={historyMock}><PrivacyForm /></Router>, { store })
   })
 
-  it('loads all the input fields', () => {
-    const inputFields = screen.getAllByTestId(/user_/)
-    expect(inputFields).toHaveLength(4)
+  it('loads all input', () => {
+    const checkboxes = screen.getAllByTestId(/user_/)
+    expect(checkboxes).toHaveLength(4)
+  })
+
+  it('displays the submit button', () => {
+    expect(screen.getByTestId('user-form-submit-button')).toHaveTextContent('Next')
   })
 
   it('uses the state values if they are present for name', () => {
@@ -54,8 +57,17 @@ describe('Rendering the initial user form', () => {
     expect(emailInput.value).toEqual('trailofkrums@durmstrang.com')
   })
 
-  it('does not use the state value for password', () => {
+  test('clicking submit calls dispatch and pushes to privacy', async () => {
+    userFormActions.submitNewUserForm = jest.fn(() => 'SUBMIT_USER_FORM')
     const passwordInput = screen.getByTestId('user_password')
-    expect(passwordInput.value).toEqual('')
+    await act(async () => {
+      await fireEvent.change(passwordInput, { target: { value: 'Qu1dDitch123' } })
+    })
+    await act(async () => {
+      await fireEvent.click(screen.getByTestId('user-form-submit-button'))
+    })
+
+    expect(store.dispatch).toHaveBeenCalledWith('SUBMIT_USER_FORM')
+    expect(historyMock.push.mock.calls[0][0]).toEqual('/privacy')
   })
 })
