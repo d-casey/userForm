@@ -57,6 +57,42 @@ describe('Rendering the user form', () => {
     expect(emailInput.value).toEqual('trailofkrums@durmstrang.com')
   })
 
+  it('does not display password even if there is a state value', () => {
+    const passwordInput = screen.getByTestId('user_password')
+    expect(passwordInput.value).toEqual('')
+  })
+
+  it('does not submit if required fields are missing, such as password', async () => {
+    await act(async () => {
+      await fireEvent.click(screen.getByTestId('user-form-submit-button'))
+    })
+
+    expect(store.dispatch).not.toHaveBeenCalled()
+  })
+
+  it('displays the required message if password was not submitted', async () => {
+    await act(async () => {
+      await fireEvent.click(screen.getByTestId('user-form-submit-button'))
+    })
+
+    const requiredErrors = await screen.findByText(/Required/)
+    expect(requiredErrors).toBeTruthy()
+  })
+
+  it('displays the validation message if password was submitted with an unsupported value', async () => {
+    const passwordInput = screen.getByTestId('user_password')
+    await act(async () => {
+      await fireEvent.change(passwordInput, { target: { value: 'badpass' } })
+    })
+
+    await act(async () => {
+      await fireEvent.click(screen.getByTestId('user-form-submit-button'))
+    })
+
+    const requiredErrors = await screen.findByText(/Incorrect password format. Please see our password guide next to the form./)
+    expect(requiredErrors).toBeTruthy()
+  })
+
   test('clicking submit calls dispatch and pushes to privacy', async () => {
     userFormActions.submitNewUserForm = jest.fn(() => 'SUBMIT_USER_FORM')
     const passwordInput = screen.getByTestId('user_password')
