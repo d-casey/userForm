@@ -28,14 +28,14 @@ See the official documentation for [running tests](https://facebook.github.io/cr
 
 ## Demo
 An example happy path of the form
-![](https://recordit.co/agzPGeOC2I)
+https://recordit.co/agzPGeOC2I
 
 And of the error validation
-![](https://recordit.co/4Tl0swoSA6)
+https://recordit.co/4Tl0swoSA6
 
 ## Stretch Goals
 Here is a demo of how to add a new checkbox on the privacy form, which will populate through the store and be logged out with the rest of the details without the need to add checkboxes manually or edit reducers.
-![](https://recordit.co/utui044dZQ)
+https://recordit.co/utui044dZQ
 
 ## Next Steps
 There are a few things I would like to still do with this project, namely:
