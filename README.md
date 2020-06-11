@@ -1,68 +1,48 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## About
 
-## Available Scripts
+I was keen to showcase some existing skills whilst also learning some new ones along the way. This is my first project from scratch using the hooks functional component approach with Redux. I have extensive experience with Redux and class based components, so I was curious to see how it would look using hooks from the ground up.
 
-In the project directory, you can run:
+This submission utilises functional components, React hooks, Redux and react-redux hooks, CSS Grid, flexbox, React Testing Library and some config driven architecture methods. I am pleased with where I have got to but would happily spend more time on it too!
 
-### `npm start`
+Overall I am pleased with the submission. I think the use of functional components throughout, broken into sensible containers and components looks neat and is much more lightweight in terms of lines of code than the class based approach. I’ve also made the privacy form really easy to extend by making it config driven. All you need to do is add an object into the config and it will add it to the form and will work fully with redux to maintain that in the state throughout too.
 
-Runs the app in the development mode.<br />
+## Installation and Running
+To run the project you will need node and npm installed. I am using node version 12.18.0 and npm version 6.14.4 for reference.
+
+Run the below commands to install and start the project. `npm start` will automatically open the browser at `localhost:3000` and display the first page.
+
+```
+$ npm install
+$ npm start
+```
+
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Notes
+Currently the form resets the state on a successful completion - ie, once you reach the done page. You can then head back to the initial home page and submit again. I have not yet covered all cases for navigating back but have the means in place to do so. When testing manually, if it's feeling confusing, then just complete the form to reset, and head back to the homepage [http://localhost:3000](http://localhost:3000).
 
-### `npm test`
+## Testing
+Tests are run with `npm test`. It will open the test runner in interactive watch mode, press `a` to run all the tests.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+See the official documentation for [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Demo
+An example happy path of the form
+![](https://recordit.co/agzPGeOC2I)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+And of the error validation
+![](https://recordit.co/4Tl0swoSA6)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Stretch Goals
+Here is a demo of how to add a new checkbox on the privacy form, which will populate through the store and be logged out with the rest of the details without the need to add checkboxes manually or edit reducers.
+![](https://recordit.co/utui044dZQ)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Next Steps
+There are a few things I would like to still do with this project, namely:
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- Create variables for brand colours in CSS files
+- Make the components styled components, and have a style.css file in the same directory as the index and test file
+- Make the sidebar content config driven as per the progressBar. Move them both into a more generic config called stages
+- Hook into the browser back button to make sensible state updates of the stage. This would allow the progress bar to update when navigating from the done page back to it.
+- Add a confirm password field which only validates successfully if it matches the existing password field value.
+- Go the whole hog and make all of the forms config driven. I would make it so that each input type is a config block and can be added to a stage by adding the block with the relevant data attributes to it. It would then be possible to put another front end forn on top of that, to allow any user to update the form themselves through a simple user interface - pretty much the tray.io way of thinking! However I did need to reign that ambition in so that I could get something submitted to you guys in a reasonable time!

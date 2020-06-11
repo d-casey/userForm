@@ -60,6 +60,7 @@ const User = ({ onSubmit }) => {
           testId={'user_email'}
         />
 
+        /* Do not pass in the value in state for the password to avoid potential user errors */
         <InputField
           type='password'
           label='Password'
